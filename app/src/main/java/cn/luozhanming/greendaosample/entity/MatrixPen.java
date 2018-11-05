@@ -47,6 +47,12 @@ public class MatrixPen {
         this.classId = classId;
     }
 
+    public MatrixPen(String penId, String penOwner, Long classId) {
+        this.penId = penId;
+        this.penOwner = penOwner;
+        this.classId = classId;
+    }
+
     @Generated(hash = 996421190)
     public MatrixPen() {
     }

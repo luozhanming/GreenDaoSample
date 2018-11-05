@@ -13,12 +13,18 @@ import org.greenrobot.greendao.DaoException;
 @Entity
 public class Question {
 
+    public static final int TYPE_SELECTION = 0;
+    public static final int TYPE_JUDGE = 1;
+
     @Id(autoincrement = true)
     private Long id;
 
+    private int page;
+
     //题号
-    @Index
     private int index;
+
+    private int type;  //0.选择题  1.判断题
 
     private int rightAnswer;
 
@@ -36,10 +42,12 @@ public class Question {
     @Generated(hash = 891254763)
     private transient QuestionDao myDao;
 
-    @Generated(hash = 389605792)
-    public Question(Long id, int index, int rightAnswer) {
+    @Generated(hash = 444284040)
+    public Question(Long id, int page, int index, int type, int rightAnswer) {
         this.id = id;
+        this.page = page;
         this.index = index;
+        this.type = type;
         this.rightAnswer = rightAnswer;
     }
 
@@ -133,6 +141,22 @@ public class Question {
 
     public void setRightAnswer(int rightAnswer) {
         this.rightAnswer = rightAnswer;
+    }
+
+    public int getType() {
+        return this.type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public int getPage() {
+        return this.page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
     }
 
     /** called by internal mechanisms, do not call yourself. */

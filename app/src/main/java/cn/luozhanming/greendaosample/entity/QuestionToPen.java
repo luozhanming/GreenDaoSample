@@ -47,6 +47,12 @@ public class QuestionToPen {
         this.answer = answer;
     }
 
+    public QuestionToPen(Long penId, Long qId, int answer) {
+        this.penId = penId;
+        this.qId = qId;
+        this.answer = answer;
+    }
+
     @Generated(hash = 941918759)
     public QuestionToPen() {
     }

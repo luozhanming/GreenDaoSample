@@ -36,6 +36,11 @@ public class Classroom {
         this.className = className;
     }
 
+    public Classroom(String classId, String className) {
+        this.classId = classId;
+        this.className = className;
+    }
+
     @Generated(hash = 851554021)
     public Classroom() {
     }
